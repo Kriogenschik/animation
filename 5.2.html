@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>animation</title>
+	<style>
+		.task-description {
+			font-size: 16px;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+			color: rgb(16, 14, 122);
+			font-weight: 600;
+		}
+		.plane1 {
+			cursor: pointer;
+			width: 40px;
+			height: 24px;
+			transition: 3s cubic-bezier(0.25, 1.35, 0.75, 1.1);
+		}
+		.plane1.fly {
+			width: 400px;
+      height: 240px;
+		}
+		.circle {
+      transition-property: width, height;
+      transition-duration: 2s;
+      position: fixed;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: red;
+      border-radius: 50%;
+    }
+		.message{
+      font-size: 20px;
+      line-height: 200px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+	<h1>Lesson 5.2. css-animations</h1>
+	<div class="task1-2">
+		<p class="task-description">
+			При нажатии картинка изменяет размеры с 40x24px до 400x240px (увеличивается в 10 раз).<br>
+			Время анимации 3 секунды.<br>
+			По окончании анимации вывести сообщение: «Анимация закончилась!».<br>
+			Если во время анимации будут дополнительные клики по картинке – они не должны ничего «сломать».<br>
+			В процессе анимации изображение выросло больше своего стандартного размера 400x240px («выпрыгнуло»), а затем вернулось к нему.
+		</p>
+		<img class="plane1" src="https://en.js.cx/clipart/flyjet.jpg">
+	</div>
+
+	<div class="task3-4">
+		<button onclick="circleStart()">showCircle(370, 150, 100)</button>
+	</div>
+</body>
+</html>
+
+<script src="./js/5.2.js"></script>
